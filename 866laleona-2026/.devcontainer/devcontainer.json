@@ -1,0 +1,21 @@
+{
+  "name": "866laleona.com — Vite + React",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "npm install",
+  "postAttachCommand": "npm run dev",
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Site preview",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}

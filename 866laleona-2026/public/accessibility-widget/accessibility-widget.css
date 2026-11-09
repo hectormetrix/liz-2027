@@ -1,0 +1,538 @@
+/**
+ * Accessibility Widget CSS
+ * Complete styles for ADA compliance features
+ * Version: 2.0 - WordPress Compatible
+ */
+
+/* ============================================
+   WIDGET BUTTON & PANEL
+   ============================================ */
+
+.a11y-widget-button {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 999999 !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  background: #3b82f6 !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-width: 56px !important;
+  max-width: 56px !important;
+  min-height: 56px !important;
+  max-height: 56px !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+}
+
+.a11y-widget-button:hover {
+  background: #2563eb !important;
+  transform: scale(1.05) !important;
+}
+
+.a11y-widget-button:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+.a11y-widget-button svg {
+  width: 24px !important;
+  height: 24px !important;
+  display: block !important;
+  pointer-events: none !important;
+}
+
+.a11y-widget-panel {
+  position: fixed !important;
+  bottom: 90px !important;
+  right: 20px !important;
+  z-index: 999999 !important;
+  width: 320px !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid #e5e7eb !important;
+  animation: slideIn 0.3s ease !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Panel Header */
+.a11y-panel-header {
+  padding: 20px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  background: white !important;
+}
+
+.a11y-panel-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin: 0 0 8px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #111827 !important;
+  line-height: 1.4 !important;
+}
+
+.a11y-panel-title svg {
+  flex-shrink: 0 !important;
+}
+
+.a11y-panel-subtitle {
+  font-size: 14px !important;
+  color: #6b7280 !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* Panel Content */
+.a11y-panel-content {
+  padding: 20px !important;
+  background: white !important;
+}
+
+/* Setting Group */
+.a11y-setting-group {
+  margin-bottom: 20px !important;
+}
+
+.a11y-setting-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  margin-bottom: 10px !important;
+  color: #374151 !important;
+  line-height: 1.4 !important;
+}
+
+/* Font Size Buttons */
+.a11y-button-group {
+  display: flex !important;
+  gap: 8px !important;
+}
+
+.a11y-size-btn {
+  flex: 1 !important;
+  padding: 10px !important;
+  font-size: 14px !important;
+  border: 1px solid #d1d5db !important;
+  background: white !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  color: #374151 !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+}
+
+.a11y-size-btn:hover {
+  background: #f3f4f6 !important;
+  border-color: #9ca3af !important;
+}
+
+.a11y-size-btn.active {
+  background: #3b82f6 !important;
+  color: white !important;
+  border-color: #3b82f6 !important;
+}
+
+.a11y-size-btn:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Toggle Option */
+.a11y-toggle-option {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 14px !important;
+  margin-bottom: 12px !important;
+  background: #f9fafb !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+}
+
+.a11y-toggle-info {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex: 1 !important;
+}
+
+.a11y-toggle-info > svg {
+  color: #6b7280 !important;
+  flex-shrink: 0 !important;
+}
+
+.a11y-toggle-label {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #111827 !important;
+  cursor: pointer !important;
+  display: block !important;
+  margin-bottom: 2px !important;
+  line-height: 1.4 !important;
+}
+
+.a11y-toggle-description {
+  font-size: 12px !important;
+  color: #6b7280 !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* Toggle Switch */
+.a11y-toggle-switch {
+  position: relative !important;
+  width: 44px !important;
+  height: 24px !important;
+  border-radius: 12px !important;
+  background: #d1d5db !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+  flex-shrink: 0 !important;
+  padding: 0 !important;
+}
+
+.a11y-toggle-switch:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+.a11y-toggle-switch.active {
+  background: #3b82f6 !important;
+}
+
+.a11y-toggle-slider {
+  position: absolute !important;
+  top: 2px !important;
+  left: 2px !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  background: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  transition: transform 0.3s ease !important;
+  pointer-events: none !important;
+}
+
+.a11y-toggle-switch.active .a11y-toggle-slider {
+  transform: translateX(20px) !important;
+}
+
+/* Reset Button */
+.a11y-reset-btn {
+  width: 100% !important;
+  padding: 12px !important;
+  margin-top: 16px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+  background: white !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  transition: all 0.2s ease !important;
+  line-height: 1.4 !important;
+}
+
+.a11y-reset-btn:hover {
+  background: #f3f4f6 !important;
+  border-color: #9ca3af !important;
+}
+
+.a11y-reset-btn:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* ============================================
+   ACCESSIBILITY MODES
+   ============================================ */
+
+/* Font Size Adjustments */
+.a11y-font-large {
+  font-size: 112.5% !important;
+}
+
+.a11y-font-larger {
+  font-size: 125% !important;
+}
+
+.a11y-font-large *,
+.a11y-font-larger * {
+  font-size: inherit !important;
+}
+
+/* High Contrast Mode */
+.a11y-high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.a11y-high-contrast * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+.a11y-high-contrast img {
+  filter: contrast(1.2) !important;
+  border: 2px solid #fff !important;
+}
+
+.a11y-high-contrast a,
+.a11y-high-contrast button {
+  background-color: #000 !important;
+  color: #ffff00 !important;
+  outline: 2px solid #ffff00 !important;
+  outline-offset: 2px !important;
+}
+
+.a11y-high-contrast .a11y-widget-button,
+.a11y-high-contrast .a11y-widget-panel {
+  background: #000 !important;
+  border-color: #fff !important;
+}
+
+.a11y-high-contrast .a11y-panel-header,
+.a11y-high-contrast .a11y-panel-content {
+  background: #000 !important;
+}
+
+.a11y-high-contrast .a11y-size-btn.active,
+.a11y-high-contrast .a11y-toggle-switch.active {
+  background: #ffff00 !important;
+  color: #000 !important;
+}
+
+/* Text Spacing */
+.a11y-text-spacing * {
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+  line-height: 1.8 !important;
+}
+
+/* Highlight Links */
+.a11y-highlight-links a {
+  background-color: #ffff00 !important;
+  color: #000 !important;
+  padding: 2px 6px !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+  border-radius: 2px !important;
+}
+
+/* Big Cursor */
+.a11y-big-cursor,
+.a11y-big-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'%3E%3Cpath fill='black' stroke='white' stroke-width='1' d='M5.5 3.21V20.8l4.86-4.86h6.78L5.5 3.21z'/%3E%3C/svg%3E"), auto !important;
+}
+
+.a11y-big-cursor a,
+.a11y-big-cursor button,
+.a11y-big-cursor [role="button"],
+.a11y-big-cursor input,
+.a11y-big-cursor select,
+.a11y-big-cursor textarea {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'%3E%3Cpath fill='black' stroke='white' stroke-width='1' d='M12 4C8.5 4 5.6 6.1 4.3 9.2c-.2.5.1 1 .6 1.2.5.2 1-.1 1.2-.6C7.1 7.1 9.3 5.5 12 5.5c3.6 0 6.5 2.9 6.5 6.5 0 2.7-1.6 4.9-4.3 5.9-.5.2-.8.7-.6 1.2.2.5.7.8 1.2.6C17.9 18.4 20 15.5 20 12c0-4.4-3.6-8-8-8z'/%3E%3Ccircle fill='black' stroke='white' stroke-width='1' cx='12' cy='12' r='3'/%3E%3C/svg%3E"), pointer !important;
+}
+
+/* Reading Guide */
+.a11y-reading-guide-line {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 40px !important;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 0, 0.3) 45%,
+    rgba(255, 255, 0, 0.3) 55%,
+    transparent 100%
+  ) !important;
+  pointer-events: none !important;
+  z-index: 999998 !important;
+  transition: top 0.05s ease-out !important;
+}
+
+/* Dyslexia-Friendly Font */
+.a11y-dyslexia-font,
+.a11y-dyslexia-font * {
+  font-family: 'Comic Sans MS', 'Arial', sans-serif !important;
+}
+
+/* Pause Animations */
+.a11y-pause-animations *,
+.a11y-pause-animations *::before,
+.a11y-pause-animations *::after {
+  animation-play-state: paused !important;
+  animation-duration: 0s !important;
+  transition: none !important;
+}
+
+/* ============================================
+   ENHANCED FOCUS INDICATORS
+   ============================================ */
+
+*:focus-visible {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* ============================================
+   SKIP TO CONTENT LINK
+   ============================================ */
+
+.a11y-skip-link {
+  position: absolute !important;
+  top: -100px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: #3b82f6 !important;
+  color: white !important;
+  padding: 12px 24px !important;
+  border-radius: 0 0 8px 8px !important;
+  font-weight: 600 !important;
+  z-index: 1000000 !important;
+  transition: top 0.2s ease !important;
+  text-decoration: none !important;
+}
+
+.a11y-skip-link:focus {
+  top: 0 !important;
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 2px !important;
+}
+
+/* ============================================
+   WORDPRESS SPECIFIC FIXES
+   ============================================ */
+
+/* Ensure widget appears above WordPress admin bar */
+.admin-bar .a11y-widget-button,
+.admin-bar .a11y-widget-panel {
+  z-index: 999999 !important;
+}
+
+/* Fix conflicts with common WordPress themes */
+.a11y-widget-button *,
+.a11y-widget-panel * {
+  box-sizing: border-box !important;
+}
+
+/* Override WordPress core button styles */
+.a11y-widget-button,
+.a11y-size-btn,
+.a11y-toggle-switch,
+.a11y-reset-btn {
+  text-shadow: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.a11y-widget-button:hover,
+.a11y-size-btn:hover,
+.a11y-reset-btn:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 640px) {
+  .a11y-widget-panel {
+    width: calc(100vw - 40px) !important;
+    right: 20px !important;
+    left: 20px !important;
+    max-height: 70vh !important;
+  }
+
+  .a11y-widget-button {
+    bottom: 16px !important;
+    right: 16px !important;
+  }
+}
+
+/* Adjust for WordPress admin bar on mobile */
+@media (max-width: 782px) {
+  .admin-bar .a11y-widget-button {
+    bottom: 66px !important;
+  }
+  
+  .admin-bar .a11y-widget-panel {
+    bottom: 136px !important;
+  }
+}
+
+/* ============================================
+   RESPECT USER PREFERENCES
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .a11y-widget-panel {
+    animation: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .a11y-widget-button,
+  .a11y-widget-panel,
+  .a11y-size-btn,
+  .a11y-toggle-option {
+    border-width: 2px !important;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .a11y-widget-button,
+  .a11y-widget-panel,
+  .a11y-reading-guide-line {
+    display: none !important;
+  }
+}

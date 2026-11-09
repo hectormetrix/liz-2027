@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="1pAG3OMF4-7Bn7rBmQBLiab6v3nanthgmRuP2E5H86g" />
+    <title>Personal Injury Attorney Brownsville TX | Liz Valdez Garza</title>
+    <meta name="description" content="Brownsville personal injury attorney Liz Valdez Garza fights for accident victims across the Rio Grande Valley. Car, truck, workplace and oil field accidents. Hablamos Español. Free consultation — call 866-LA-LEONA." />
+    <meta name="author" content="Valdez Garza Law Firm, P.C." />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://866laleona.com/" />
+    <meta property="og:site_name" content="Valdez Garza Law Firm, P.C." />
+    <meta property="og:title" content="Personal Injury Attorney Brownsville TX | Liz Valdez Garza" />
+    <meta property="og:description" content="Car, truck, workplace and oil field accident attorney serving the Rio Grande Valley. Hablamos Español. Free consultation — 866-LA-LEONA." />
+    <meta property="og:image" content="https://866laleona.com/images/og-share.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://866laleona.com/" />
+    <meta name="twitter:title" content="Personal Injury Attorney Brownsville TX | Liz Valdez Garza" />
+    <meta name="twitter:description" content="Car, truck, workplace and oil field accident attorney serving the Rio Grande Valley. Hablamos Español. Free consultation — 866-LA-LEONA." />
+    <meta name="twitter:image" content="https://866laleona.com/images/og-share.jpg" />
+
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://866laleona.com/" />
+
+    <!-- Brand fonts: Cinzel (headings, logo) + Source Sans 3 (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Preload the hero photo so the first screen paints fast -->
+    <link rel="preload" as="image" href="/images/liz-hero.webp" type="image/webp">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Accessibility widget (styles) -->
+    <link rel="stylesheet" href="/accessibility-widget/accessibility-widget.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Analytics Tracking Script (MIM standard: visits, tel: clicks, mailto: clicks) -->
+    <script>
+    (function() {
+      setTimeout(function() {
+        document.body.addEventListener('click', function(e) {
+          var target = e.target;
+          var maxDepth = 5;
+          var depth = 0;
+
+          while (target && depth < maxDepth) {
+            if (target.tagName === 'A' && target.href && target.href.startsWith('tel:')) {
+              fetch('/api/track-call.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  page_url: window.location.href,
+                  page_title: document.title,
+                  referrer: document.referrer,
+                  user_agent: navigator.userAgent
+                })
+              }).catch(function(err) { console.log('Call tracking error:', err); });
+              break;
+            }
+
+            if (target.tagName === 'A' && target.href && target.href.startsWith('mailto:')) {
+              fetch('/api/track-email.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  page_url: window.location.href,
+                  page_title: document.title,
+                  referrer: document.referrer,
+                  user_agent: navigator.userAgent
+                })
+              }).catch(function(err) { console.log('Email tracking error:', err); });
+              break;
+            }
+
+            target = target.parentElement;
+            depth++;
+          }
+        }, true);
+      }, 2000);
+
+      window.addEventListener('load', function() {
+        fetch('/api/track-visit.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            page_url: window.location.href,
+            page_title: document.title,
+            referrer: document.referrer,
+            user_agent: navigator.userAgent
+          })
+        }).catch(function(err) { console.log('Visit tracking error:', err); });
+      });
+    })();
+    </script>
+
+    <!-- Accessibility Widget -->
+    <script src="/accessibility-widget/accessibility-widget.js"></script>
+  </body>
+</html>
