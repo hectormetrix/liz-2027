@@ -1,27 +1,141 @@
-import React from 'react';
-import Navigation from '@/components/Navigation';
-import HeroSection from '@/components/HeroSection';
-import LizGarzaWorkplaceSection from '@/components/LizGarzaWorkplaceSection';
-import ReviewsSection from '@/components/ReviewsSection';
-import Footer from '@/components/Footer';
+import { Check, Phone } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import CaseReviewStrip from "@/components/home/CaseReviewStrip";
+import ClientReviews from "@/components/home/ClientReviews";
+import FinalCta from "@/components/home/FinalCta";
+import { SITE } from "@/lib/siteConfig";
 
-const WorkplaceInjuries = () => {
-  return (
-    <div className="min-h-screen bg-white font-helvetica font-bold">
-      <Navigation />
-      <HeroSection 
-        imageUrl="/lovable-uploads/6c150c1d-b9e5-427e-873a-57c6ee49662e.png"
-        imageAlt="Workplace Injury - Workers Compensation"
-        title="Workers Compensation Lawyer Brownsville, TX"
-        subtitle="Injured at Work? You Need a Workers Compensation Lawyer That Will Fight for You."
-        messageTitle="Fighting for Injured Workers"
-        messageSubtitle="Get the Benefits You Deserve."
-      />
-      <ReviewsSection />
-      <LizGarzaWorkplaceSection />
-      <Footer />
-    </div>
-  );
-};
+const TRUST_POINTS = [
+  "Free Consultation",
+  "Workers' Comp Guidance",
+  "Hablamos Español",
+];
+
+const WorkplaceInjuries = () => (
+  <div className="min-h-screen bg-white font-sans text-brand-ink">
+    <Navigation />
+
+    <main>
+      <section className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-black pt-16 text-white sm:pt-[68px] md:pt-28 lg:min-h-[max(100svh,720px)] lg:pt-[134px] xl:pt-[142px]">
+        <div
+          className="absolute inset-0 -z-10"
+          aria-hidden="true"
+          style={{
+            background:
+              "radial-gradient(ellipse 60% 70% at 78% 50%, rgba(214,26,32,0.28) 0%, rgba(214,26,32,0.08) 40%, rgba(0,0,0,0) 70%)",
+          }}
+        />
+        <img
+          src="/images/seal-white.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-40 top-1/2 -z-10 hidden w-[760px] -translate-y-1/2 opacity-[0.035] lg:block"
+        />
+
+        <div className="mx-auto grid w-full max-w-7xl flex-1 items-center gap-10 px-6 py-10 lg:grid-cols-12 lg:py-8">
+          <div className="lg:col-span-7">
+            <h1 className="font-cinzel">
+              <span className="eyebrow !font-sans">Brownsville Workers' Compensation Lawyer</span>
+              <span className="mt-5 block text-[2.6rem] font-black leading-[1.02] sm:text-6xl xl:text-[5.25rem]">
+                Fighting for
+                <span className="block text-brand-red">Injured Workers</span>
+              </span>
+              <span className="mt-4 block text-xl font-bold tracking-[0.12em] text-white/85 sm:text-2xl xl:text-[1.9rem]">
+                Every Step of the Way
+              </span>
+            </h1>
+
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl">
+              A workplace injury can affect your health, your paycheck, and your future. {SITE.attorneyName}
+              helps workers understand their rights, navigate the claims process, and pursue the benefits they
+              need to recover.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href={SITE.phoneHref} className="btn-red !py-4 !text-lg">
+                <Phone className="h-5 w-5" aria-hidden="true" />
+                Call {SITE.vanityPhone}
+              </a>
+              <a href="#case-review" className="btn-outline-light !py-4 !text-lg">
+                Free Case Review
+              </a>
+            </div>
+
+            <ul className="mt-8 flex flex-wrap gap-x-7 gap-y-3">
+              {TRUST_POINTS.map((point) => (
+                <li key={point} className="flex items-center gap-2 text-[15px] font-semibold text-white/85">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-red/20">
+                    <Check className="h-3.5 w-3.5 text-brand-red" strokeWidth={3} aria-hidden="true" />
+                  </span>
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="relative mx-auto flex w-full max-w-md items-center justify-center lg:col-span-5 lg:max-w-none">
+            <img
+              src="/lovable-uploads/6c150c1d-b9e5-427e-873a-57c6ee49662e.png"
+              alt="Worker injured at a job site"
+              width={1000}
+              height={1338}
+              className="relative z-0 block h-auto max-h-[calc(100svh-160px)] w-auto max-w-full select-none object-contain lg:max-h-[calc(100svh-210px)]"
+              draggable={false}
+            />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent" aria-hidden="true" />
+            <div className="absolute bottom-6 left-1/2 w-max -translate-x-1/2 border-l-4 border-brand-red bg-black/80 px-5 py-3 backdrop-blur-sm lg:bottom-10 lg:left-auto lg:right-0 lg:translate-x-0">
+              <p className="font-cinzel text-lg font-bold tracking-wide">{SITE.attorneyName}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/60">Attorney at Law</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CaseReviewStrip />
+
+      <section className="bg-brand-cream px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow">Work Injury Claims</p>
+            <h2 className="mt-4 text-4xl font-bold leading-tight text-brand-ink sm:text-5xl">
+              We Help Workers Recover <span className="text-brand-red">Their Benefits</span>
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "On-the-Job Injuries",
+                text: "Whether it was a fall, equipment accident, or repetitive strain, we help determine what benefits you are entitled to and how to pursue them.",
+              },
+              {
+                title: "Denied Claims",
+                text: "If your claim was delayed, denied, or undervalued, we can review the facts and move quickly to protect your rights.",
+              },
+              {
+                title: "Third-Party Claims",
+                text: "In some cases, a worker can pursue additional recovery beyond workers’ compensation if a third party was responsible for the accident.",
+              },
+            ].map((item) => (
+              <article key={item.title} className="rounded-xl border border-brand-ink/10 bg-white p-7 shadow-[0_20px_50px_-30px_rgba(0,0,0,0.35)]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-red/10 text-brand-red">
+                  <Check className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <h3 className="mt-5 text-xl font-bold text-brand-ink">{item.title}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-brand-ink/70">{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ClientReviews />
+      <FinalCta />
+    </main>
+
+    <Footer />
+  </div>
+);
 
 export default WorkplaceInjuries;
